@@ -18,7 +18,7 @@ class Arbin
         void postOrden(Nodo*);
     public:
         Arbin();
-        void Crear(int,string);
+        void Crear();
         void Recorridos(int);
         bool Vacia();
         
