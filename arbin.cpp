@@ -1,4 +1,8 @@
-#include <iostream>
+#include <iostream># include  <iostream>
+# include  <stdlib.h>
+# include  <conio.h>
+# include  <fstream>
+# include  <Iterator>
 #include "arbin.h"
 
 using namespace std;
