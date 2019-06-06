@@ -19,10 +19,27 @@ bool Arbin::Vacia()
 	}
 }
 
-void Arbin::Crear(int info,string nombre)
+void Arbin::Crear()
 {
+	//IMPORTANDO ARCHIVO
+    ifstream myfile("familia.txt");
+    string data;
+    
+    while(!myfile.eof())
+	{
+		//EXTRAER INFORMACIÓN LINEA POR LINEA
+    	getline(myfile,data);
+		   	
+		//CONVERTIR STRING A INT	
+		int info=atoi(data.c_str());
+		//OBTENER STRING	
+		string nombre=data;
+	
+	//CREAR NUEVO NODO CON LA INFORMACIÓN OBTENIDA
 	Nodo* aux = new Nodo(info,nombre);
     raiz = Insertar(raiz,aux);
+    
+	}
 }
 
 Nodo* Arbin::Insertar(Nodo *p, Nodo *q){
@@ -40,15 +57,6 @@ Nodo* Arbin::Insertar(Nodo *p, Nodo *q){
     
     return p;
 }
-
-/*int Arbin::getInfo_der(Nodo *q){
-    if(q->Rlink == NULL){
-        return q->info;
-    }
-    else{
-        return getInfo_der(q->Rlink);
-    }
-}*/
 
 void Arbin::preOrden(Nodo *r){
     if(r != NULL){
