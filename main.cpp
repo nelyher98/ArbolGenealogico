@@ -13,17 +13,7 @@ main(){
     bool salir = false;
     Arbin *hoja = new Arbin;
     
-        hoja->Crear(7,"Nely");
-        hoja->Crear(3,"Nely");
-        hoja->Crear(1,"Margarita");
-        hoja->Crear(6,"Reynaldo");
-        
-        hoja->Crear(4,"Visabuela");
-		hoja->Crear(5,"Tatarabuela");
-        
-        hoja->Crear(12,"Ismaael");
-        hoja->Crear(9,"Reyna");
-        hoja->Crear(13,"Ismael");
+        hoja->Crear();
         
         do{
         
